@@ -1,0 +1,28 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+Green='\033[0;32m'
+White='\033[0;37m'
+clear
+
+# AutoUpdate
+
+echo -e "${Green} >>>  Update Termux?  [y/n]"
+read replyme
+if [[ $replyme == 'y' ]]
+then
+echo -e " >>> ${White} Updating..."
+pkg update;pkg upgrade
+else
+clear
+fi
+
+# Clear screen
+
+echo -e "${Green} >>>  Clear?  [y/n]"
+read replyme
+if [[ $replyme == 'n' ]]
+then
+echo
+else
+clear
+fi
